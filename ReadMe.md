@@ -2,15 +2,15 @@
 
 This repo documents in pictures how I replaced the original Exidy Sorcerer's (version 1) linear power supply with a modern switched mode supply, all hidden within the original case. 
 
-The main problem with the original Exidy Sorcerer was with its linear power supply and heat dissipation. It ran very hot and had little or no airflow. The LM323K +5vregulator had a bypass register across it which also ran very hot. What I did back in the day was to (1) build a custom fan unit to suck out the heat and (2) to add additional heat sinks to the +5v regulator. 
+The main problem with the original Exidy Sorcerer was with its linear power supply and heat dissipation. It ran very hot and had little or no airflow. The LM323K +5v regulator had a 5ohm (10W) bypass register across it which also ran very hot. What I did back in the day was to (1) build a custom fan unit to suck out the heat and (2) to add additional heat sinks to the +5v regulator. 
 
-<img src="https://github.com/rcl9/Imagery-of-Past-Projects/blob/main/Hardware/1980%20-%20Fan%20enclosure%20for%20very%20hot%20Exidy%20Sorcerer%20%232.jpg" alt="" style="width:40%; height:auto;">     <img src="https://github.com/rcl9/Imagery-of-Past-Projects/blob/main/Hardware/1981%20to%201982%20-%20Various%20hardware%20modifications%20for%20Exidy%20Sorcerer.jpg" alt="" style="width:40%; height:auto;">
+<img src="https://github.com/rcl9/Imagery-of-Past-Projects/blob/main/Hardware/1980%20-%20Fan%20enclosure%20for%20very%20hot%20Exidy%20Sorcerer%20%232.jpg" alt="" style="width:30%; height:auto;">     <img src="https://github.com/rcl9/Imagery-of-Past-Projects/blob/main/Hardware/1981%20to%201982%20-%20Various%20hardware%20modifications%20for%20Exidy%20Sorcerer.jpg" alt="" style="width:65%; height:auto;">
 
 After recently recapping the tantalums in my Sorcerer I was 100% all set to replace the original filtering caps and the LM323K +5v regulator with new components. However, I then discovered that the LM323K had become obsolete 15 years ago and its price had skyrocketed to well over $120 or more. And I did not want to replace it with a tiny little switched-mode variation due to their inherent noise.
 
-Some people will argue that a rare Exidy Sorcerer I should remain in its original condition and not be modified, such as with the major changes needed for a new switched mode power supply. However, in my case I was able to (eventually) justify these modifications with myself based on:
+Some people will argue that a rare Exidy Sorcerer should remain in its original condition and not be modified, such as with the major changes needed for a new switched mode power supply. However, in my case I was able to (eventually) justify these modifications based on these arguments:
 
-- By 1982 my machine (as seen in the photo above) was already a "Franken-Sorcerer" and  heavily kludged. Hence, I was doing the machine a favour to simplify its power supply system and clean it up visually + modernize the PSU for the next 40 years.
+- By 1982 my machine (as seen in the photo above) was already a "Franken-Sorcerer" and  heavily kludged. Hence, I was doing the machine a favour to simplify its power supply system and clean it up visually + modernize the PSU.
 
 - It will run a lot cooler and there should be ample "clean" power for the machine. But much more importantly, I'll have the peace of mind that the machine will not blow up if the linear power supply fails in the future. 
 
@@ -20,15 +20,15 @@ Some people will argue that a rare Exidy Sorcerer I should remain in its origina
 
 For the S-100 box, I felt that its simple linear supply was okay and that the LM323K would be fine to handle the few ICs on the interface board (but I did recap it anyway). 
 
-Also, I would never have considered even starting this project without seeing Thomas Riesen's post to the "Vintage S100 Computer Enthusiasts" Facebook group on March 27 2025 which showed that it was physically possible to put a small Mean Well PSU in the machine.  I had also bumped into 1 or 2 other people who had done such a similar change-over to switched-mode. 
+Also, I would never have considered even starting this project without seeing Thomas Riesen's post to the "Vintage S100 Computer Enthusiasts" Facebook group on March 27 2025 which showed that it was physically possible to put a small Mean Well PSU within the machine.  I had also bumped into 1 or 2 other people who had done such a similar change-over to switched-mode. But no one had documented the process.
 
-Up front I'll state (and warn you) that "it is a very tight fit" to get the Mean Well "RQ-65" inside the machine, without it hitting the keyboard's PCB. I had about 1mm or less clearance after all was said and done, and that was after a few weeks of careful fiddling.
+Up front I'll state (and warn you) that "it is a very tight fit" to get the Mean Well RQ-65 inside the machine, without it hitting the keyboard's PCB. I had about 1mm or less clearance after all was said and done, and that was after a few weeks of careful fiddling.
 
 ## Step-by-Step Guide
 
-First, both power switches of the Exidy Sorcerer and the S-100 box had failed. It is recommended that you remove them and pry them open with a small screwdriver. The problem is that the "green gel" placed inside has gone bad and seeped out everywhere. It took me about 45mins to carefully pick out this junk from each switch. It is also a bit tricky to snap the plastic piece back into the switch with the copper rocker on the correct side - I tended to get this right 1 out of 3 attempts but it can be done. 
+First, both power switches of the Exidy Sorcerer and the S-100 box had failed. It is recommended that you remove them and pry them open with a small screwdriver. The problem was that the "green gel" placed inside had gone bad and seeped out everywhere. It took  about 45mins to carefully pick out this junk from each switch. It is also a bit tricky to snap the plastic piece back into the switch with the copper rocker on the correct side - I tended to get this right 1 out of 3 attempts but it can be done. 
 
-<img src="/Images/switch1.jpg" alt="" style="width:35%; height:auto;">    <img src="/Images/switch2.jpg" alt="" style="width:60%; height:auto;">
+<img src="/Images/switch2.jpg" alt="" style="width:60%; height:auto;">    <img src="/Images/switch1.jpg" alt="" style="width:35%; height:auto;">
 
 The old power supply components need to be removed first. You can start with the power transformer and line filter:
 
@@ -60,9 +60,9 @@ As shown in the following photo, the basic idea is to mount the PSU via 3 stand-
 
 <img src="/Images/img7.jpg" alt="" style="width:75%; height:auto;">
 
-The next major task was to figure out where and how to attach the +5v, +12v, 10v and ground wires to the motherboard. That took a while because I didn't want to mess up the power supplies at all. Determining an appropriate location for the -10v was particularly time consuming. 
+The next major task was to figure out where and how to attach the +5v, +12v, -10v and ground wires to the motherboard. That took a while because I didn't want to mess up the power supplies at all. Determining an appropriate location for the -10v was particularly time consuming. 
 
-I cleaned out the holes in the motherboard very well then used an old IBM PC 4-wire connector to wire the power into the motherboard. That only took 30 to 45mins at most. 
+I cleaned out the holes in the motherboard very well then used an old IBM PC 4-wire power cable to wire the power into the motherboard. That only took 30 to 45mins at most. 
 
 <img src="/Images/img9.jpg" alt="" style="width:75%; height:auto;">
 
@@ -76,17 +76,17 @@ Lastly, I connected the ground wire to the top ground plane of the motherboard:
 
 <img src="/Images/img12.jpg" alt="" style="width:75%; height:auto;">
 
-New lug crimp terminals were added to the +120v and ground wires:
+New lug crimp terminals were added to the 120v and ground wires:
 
 <img src="/Images/img13.jpg" alt="" style="width:75%; height:auto;">
 
-Given the overall tight space tolerances I had determined, there is literally no space between the PSU and the 120v power section, especially the fuse holder. In the next photo I added electrical tape around the switch and fuse folder. 
+Given the overall tight space tolerances that I had pre-determined, there is literally no space between the PSU and the 120v power section, especially the fuse holder. In the next photo I added electrical tape around the switch and fuse folder. 
 
-This photo also clearly shows the "Z" (or "L") bracket which I attached to the PSU on the left side which which would allow me to secure it to the yellow stand-off. The bolt shown on the right side of the PSU (above the new white plastic stand-off) was "nearly impossible" to secure in place but through magic it did catch the screw. Again, I'll say that Mean Well doesn't make it easy to mount these units in a horizontal plane. 
+This photo also clearly shows the "Z" (or "L") bracket which I attached to the PSU on the left side which would allow me to secure it to the yellow stand-off. The bolt shown on the right side of the PSU (above the new white plastic stand-off) was "nearly impossible" to set in place but through magic it did catch the screw. Again, I'll say that Mean Well doesn't make it easy to mount these units in a horizontal plane. 
 
 <img src="/Images/img14.jpg" alt="" style="width:75%; height:auto;">
 
-This photo shows how the 120v power and chassis ground were connected to the PSU. Due to the tight tolerances I had to bend up the crimp terminals to 70deg or thereabouts. Notice also the placement of the electrical tape.
+This photo shows how the 120v power and chassis ground were connected to the PSU. Due to the tight tolerances I had to bend up the crimp terminals to 30-40deg or thereabouts. Notice also the placement of the electrical tape.
 
 <img src="/Images/img15.jpg" alt="" style="width:75%; height:auto;">
 
@@ -102,12 +102,14 @@ The last 3 photos show the completed PSU and its mounting within the computer. P
 
 I wanted to close out this tutorial by showing "just how tight" the tolerances are for placing this Mean Well PSU within the Sorcerer. The core problem is that the keyboard's PCB protrudes quite a bit into the interior space around the old power supply section. I had taken note of this early into my review of this spacing issue and it had worried me as to whether I could get the PSU mounted all while providing some space tolerance for the keyboard's PCB. As you see, I was fortunate to get a bit of space where needed. I could have also dropped the height of the PSU a tiny bit via the adjustment screw (shown on the "L" bracket in this photo) to get a bit more clearance, if needed. 
 
+And for those that many be wondering why there is a large round hole in the side of my Sorcerer, it is due to the square 120v cooling fan that I used to have bolted onto the side of the computer in the early 1980s. I suppose it now comes in handy to provide better ventilation for the Mean Well PSU.
+
 <img src="/Images/img20 - keyboard pcb clearance.jpg" alt="" style="width:75%; height:auto;">
 
 ## Was it worth all of the work? Yes and no.
 
 In retrospect, for others to consider before they launch into doing the same modifications:
 
-1) First, it took a considerable amount of planning, execution and work to pull the project off. It wasn't a quick and easy retrofit.
+1) First, it took a considerable amount of planning, execution and work to pull off the project. It wasn't a quick and easy retrofit.
 
 2) However, the original goal was met, such that the Sorcerer now has a stable and not-so-hot power supply, modernized for 40 years into the future.
