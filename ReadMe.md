@@ -102,7 +102,7 @@ The last 3 photos show the completed PSU and its mounting within the computer. P
 
 I wanted to close out this tutorial by showing "just how tight" the tolerances are for placing this Mean Well PSU within the Sorcerer. The core problem is that the keyboard's PCB protrudes quite a bit into the interior space around the old power supply section. I had taken note of this early into my review of this spacing issue and it had worried me as to whether I could get the PSU mounted all while providing some space tolerance for the keyboard's PCB. As you see, I was fortunate to get a bit of space where needed. I could have also dropped the height of the PSU a tiny bit via the adjustment screw (shown on the "L" bracket in this photo) to get a bit more clearance, if needed. 
 
-And for those that many be wondering why there is a large round hole in the side of my Sorcerer, it is due to the square 120v cooling fan that I used to have bolted onto the side of the computer in the early 1980s. I suppose it now comes in handy to provide better ventilation for the Mean Well PSU.
+And for those that many be wondering why there is a large round hole in the side of my Sorcerer, it is due to the square 120v cooling fan that I used to have bolted onto the side of the computer in the early 1980s. I suppose the hole now comes in handy to provide better ventilation for the Mean Well PSU.
 
 <img src="/Images/img20 - keyboard pcb clearance.jpg" alt="" style="width:75%; height:auto;">
 
