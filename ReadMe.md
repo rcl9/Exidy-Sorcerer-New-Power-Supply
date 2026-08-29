@@ -4,7 +4,7 @@ This repo documents in pictures how I replaced the original Exidy Sorcerer's (ve
 
 The main problem with the original Exidy Sorcerer was with its linear power supply and heat dissipation. It ran very hot and had little or no airflow. The LM323K +5v regulator had a 5ohm (10W) bypass register across it which also ran very hot. What I did back in the day was to (1) build a custom fan unit to suck out the heat and (2) to add additional heat sinks to the +5v regulator.
 
-<img src="https://github.com/rcl9/Imagery-of-Past-Projects/blob/main/Hardware/1980%20-%20Fan%20enclosure%20for%20very%20hot%20Exidy%20Sorcerer%20%232.jpg" alt="" style="width:30%; height:auto;">     <img src="https://github.com/rcl9/Imagery-of-Past-Projects/blob/main/Hardware/1981%20to%201982%20-%20Various%20hardware%20modifications%20for%20Exidy%20Sorcerer.webp" alt="" style="width:65%; height:auto;">
+<p> <img src="https://github.com/rcl9/Imagery-of-Past-Projects/blob/main/Hardware/1980%20-%20Fan%20enclosure%20for%20very%20hot%20Exidy%20Sorcerer%20%232.webp" alt="" style="width:30%; height:auto;">     <img src="https://github.com/rcl9/Imagery-of-Past-Projects/blob/main/Hardware/1981%20to%201982%20-%20Various%20hardware%20modifications%20for%20Exidy%20Sorcerer.webp" alt="" style="width:65%; height:auto;">
 
 After recently recapping the tantalums in my Sorcerer I was 100% all set to replace the original filtering caps and the LM323K +5v regulator with new components. However, I then discovered that the LM323K had become obsolete 15 years ago and its price had skyrocketed to well over $120 or more. And I did not want to replace it with a tiny little switched-mode variation due to their inherent noise.
 
